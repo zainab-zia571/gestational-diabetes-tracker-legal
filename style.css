@@ -1,0 +1,312 @@
+/*
+ * Gestational Diabetes Tracker — legal site.
+ *
+ * Carries the app's own "Soft Rose" palette so the pages read as part of the
+ * product rather than as boilerplate bolted on for the store listing.
+ */
+
+:root {
+  --background: #fff9f8;
+  --surface: #fdf4f5;
+  --blush: #f7e6e9;
+  --petal: #f2d2d9;
+  --rose: #c98291;
+  --rosewood: #8f4f60;
+  --sage: #789985;
+  --ink: #3f3035;
+  --muted: #806d73;
+  --border: #eadde0;
+
+  --measure: 44rem;
+  --radius: 16px;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  -webkit-text-size-adjust: 100%;
+}
+
+body {
+  margin: 0;
+  background: var(--background);
+  color: var(--ink);
+  font-family: system-ui, -apple-system, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+  font-size: 17px;
+  line-height: 1.65;
+}
+
+/* ------------------------------------------------------------------ header */
+
+.site-header {
+  background: linear-gradient(180deg, var(--blush) 0%, var(--background) 100%);
+  border-bottom: 1px solid var(--border);
+}
+
+.site-header__inner {
+  max-width: var(--measure);
+  margin: 0 auto;
+  padding: 1.5rem 1.25rem 1.25rem;
+}
+
+.brand {
+  display: inline-block;
+  font-size: 1.05rem;
+  font-weight: 600;
+  color: var(--rosewood);
+  text-decoration: none;
+  letter-spacing: -0.01em;
+}
+
+.site-nav {
+  margin-top: 1rem;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+}
+
+.site-nav a {
+  color: var(--muted);
+  text-decoration: none;
+  font-size: 0.92rem;
+  padding: 0.45rem 0.85rem;
+  border-radius: 999px;
+  border: 1px solid transparent;
+}
+
+.site-nav a:hover,
+.site-nav a:focus-visible {
+  color: var(--rosewood);
+  background: var(--blush);
+}
+
+.site-nav a[aria-current="page"] {
+  color: var(--rosewood);
+  background: var(--petal);
+  font-weight: 600;
+}
+
+/* ------------------------------------------------------------------- main */
+
+main {
+  max-width: var(--measure);
+  margin: 0 auto;
+  padding: 2.25rem 1.25rem 3rem;
+}
+
+h1 {
+  font-size: clamp(1.7rem, 5vw, 2.25rem);
+  line-height: 1.2;
+  letter-spacing: -0.02em;
+  margin: 0 0 0.5rem;
+}
+
+h2 {
+  font-size: 1.2rem;
+  letter-spacing: -0.01em;
+  margin: 2.25rem 0 0.6rem;
+  color: var(--rosewood);
+}
+
+h3 {
+  font-size: 1.02rem;
+  margin: 1.5rem 0 0.4rem;
+}
+
+p,
+li {
+  color: var(--ink);
+}
+
+.lede {
+  font-size: 1.08rem;
+  color: var(--muted);
+  margin-top: 0;
+}
+
+.effective {
+  color: var(--muted);
+  font-size: 0.9rem;
+  margin: 0 0 1.5rem;
+}
+
+ul {
+  padding-left: 1.15rem;
+}
+
+li {
+  margin: 0.3rem 0;
+}
+
+a {
+  color: var(--rosewood);
+}
+
+/* --------------------------------------------------------------- elements */
+
+.callout {
+  background: var(--blush);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  padding: 1.1rem 1.25rem;
+  margin: 1.75rem 0;
+}
+
+.callout p:first-child {
+  margin-top: 0;
+}
+
+.callout p:last-child {
+  margin-bottom: 0;
+}
+
+/* The medical disclaimer, marked with sage rather than an alarm colour. */
+.disclaimer {
+  border-left: 4px solid var(--sage);
+  background: var(--surface);
+  border-radius: 0 var(--radius) var(--radius) 0;
+  padding: 1.1rem 1.25rem;
+  margin: 1.75rem 0;
+}
+
+.disclaimer strong {
+  color: var(--rosewood);
+}
+
+.actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.75rem;
+  margin: 1.75rem 0 0;
+}
+
+.button {
+  display: inline-block;
+  padding: 0.75rem 1.35rem;
+  border-radius: 999px;
+  text-decoration: none;
+  font-weight: 600;
+  font-size: 0.95rem;
+  border: 1px solid transparent;
+}
+
+.button--primary {
+  background: var(--rosewood);
+  color: #fffcfc;
+}
+
+.button--primary:hover,
+.button--primary:focus-visible {
+  background: var(--rose);
+}
+
+.button--quiet {
+  background: var(--surface);
+  color: var(--rosewood);
+  border-color: var(--border);
+}
+
+.button--quiet:hover,
+.button--quiet:focus-visible {
+  background: var(--blush);
+}
+
+.feature-list {
+  list-style: none;
+  padding: 0;
+  margin: 1.25rem 0 0;
+  display: grid;
+  gap: 0.55rem;
+}
+
+.feature-list li {
+  padding-left: 1.5rem;
+  position: relative;
+}
+
+/* A petal-toned marker instead of a bullet. */
+.feature-list li::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0.62em;
+  width: 8px;
+  height: 8px;
+  border-radius: 999px;
+  background: var(--rose);
+}
+
+.contact-email {
+  font-size: 1.1rem;
+  font-weight: 600;
+  word-break: break-word;
+}
+
+/* ------------------------------------------------------------------ footer */
+
+.site-footer {
+  border-top: 1px solid var(--border);
+  background: var(--surface);
+  margin-top: 2rem;
+}
+
+.site-footer__inner {
+  max-width: var(--measure);
+  margin: 0 auto;
+  padding: 1.75rem 1.25rem 2.25rem;
+}
+
+.site-footer__links {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.4rem 1.1rem;
+  margin-bottom: 0.9rem;
+}
+
+.site-footer__links a {
+  color: var(--muted);
+  text-decoration: none;
+  font-size: 0.92rem;
+}
+
+.site-footer__links a:hover,
+.site-footer__links a:focus-visible {
+  color: var(--rosewood);
+  text-decoration: underline;
+}
+
+.site-footer__name {
+  font-weight: 600;
+  color: var(--rosewood);
+  margin: 0 0 0.2rem;
+}
+
+.site-footer__note {
+  color: var(--muted);
+  font-size: 0.86rem;
+  margin: 0;
+}
+
+/* Visible keyboard focus everywhere, matching the app's accessibility floor. */
+a:focus-visible,
+.button:focus-visible {
+  outline: 2px solid var(--rose);
+  outline-offset: 2px;
+}
+
+@media (max-width: 30rem) {
+  body {
+    font-size: 16px;
+  }
+
+  main {
+    padding: 1.75rem 1.1rem 2.5rem;
+  }
+
+  .actions .button {
+    width: 100%;
+    text-align: center;
+  }
+}
