@@ -25,7 +25,7 @@
 
     <main>
       <h1>Privacy Policy</h1>
-      <p class="effective">Effective date: 10 September 2026</p>
+      <p class="effective">Effective date: 14 September 2026</p>
 
       <h2>1. Introduction</h2>
       <p>
@@ -79,17 +79,46 @@
         medical-grade or professional-grade security.
       </p>
 
-      <h2>4. Device information</h2>
+      <h2>4. Usage and crash reports (optional, off until you choose)</h2>
       <p>
-        The app does not currently include any analytics service, crash-reporting service
-        or advertising software. No usage statistics, crash diagnostics, advertising
-        identifiers or device identifiers are collected or transmitted by the app.
+        The app can send anonymous usage and crash reports to help fix problems and improve
+        it. <strong>Nothing is sent unless you turn this on.</strong> The app asks you once,
+        and you can change your choice at any time in Settings → Data and privacy →
+        "Share anonymous usage &amp; crash reports". If you turn it off, reporting stops and
+        crash reports that have not yet been sent are deleted from your device.
+      </p>
+      <p>If you turn it on, the app uses two Google services:</p>
+      <ul>
+        <li>
+          <strong>Firebase Analytics</strong> records which features are used: that the app
+          was opened, that the subscription screen was shown, that a purchase or restore
+          was completed, that your subscription status changed, that a review request was
+          made and that "Rate the app" was tapped. Each event carries only fixed labels
+          (for example, which screen a subscription offer was opened from), never anything
+          you typed or recorded. Firebase also collects standard technical information such
+          as an app-instance identifier, device model, operating system version, app
+          version, language, and an approximate location derived from your IP address.
+        </li>
+        <li>
+          <strong>Firebase Crashlytics</strong> records crash reports: technical details of
+          the error, the state of the app and device at the time (such as device model,
+          operating system version, available memory and app version), a Crashlytics
+          installation identifier, whether a Pro subscription was active, and short
+          technical labels describing what the app was doing.
+        </li>
+      </ul>
+      <p>
+        These reports <strong>never include your health entries</strong>: no glucose values,
+        meals or food descriptions, notes, symptoms, photos, due dates, profile names or
+        any other information you record. The app does not collect your advertising ID or
+        Android ID, does not use your data for advertising, and turns off advertising
+        storage and ad personalisation in Google Analytics.
       </p>
       <p>
-        If diagnostic or anonymous usage reporting is added in a future version, this policy
-        will be updated before that version is released, and such reporting would never
-        include the content of your health entries — no glucose values, food descriptions,
-        notes or any other health content would be sent as part of it.
+        Crash reports are kept by Google for a limited period (currently 90 days).
+        Analytics data is kept according to the retention period set for the app's Google
+        Analytics property. Google processes this data under the
+        <a href="https://firebase.google.com/support/privacy">Firebase privacy and security terms</a>.
       </p>
 
       <h2>5. Permissions</h2>
@@ -117,8 +146,13 @@
           <strong>Vibration</strong> — for reminder alerts and touch feedback.
         </li>
         <li>
-          <strong>Internet</strong> — used to open this website in your browser when you tap
-          a link in the app. Your health entries are never uploaded.
+          <strong>Internet</strong> — used to open this website when you tap a link, to check
+          and restore a Pro subscription, and to send usage and crash reports if you have
+          turned them on. Your health entries are never uploaded.
+        </li>
+        <li>
+          <strong>Google Play billing</strong> — to buy, restore and manage a Pro
+          subscription through Google Play.
         </li>
       </ul>
       <p>
@@ -133,6 +167,10 @@
         <li>No account is required.</li>
         <li>No login is required.</li>
         <li>The developer has no access to, and no copy of, what you record.</li>
+        <li>
+          Subscription records and optional usage and crash reports are stored by the
+          services described in sections 4 and 8. They do not contain your health entries.
+        </li>
       </ul>
 
       <h2>7. Backup and restore</h2>
@@ -152,16 +190,42 @@
 
       <h2>8. Third-party services</h2>
       <p>
-        The app does not currently integrate any third-party service that receives your
-        information. Specifically, it does not use Firebase Analytics, Firebase Crashlytics,
-        Firebase Cloud Messaging, Firebase Authentication, Cloud Firestore, Firebase Realtime
-        Database, Firebase Cloud Storage, any advertising network, or any other analytics or
-        tracking provider.
+        None of the services below receive your health entries. The app uses:
       </p>
+      <ul>
+        <li>
+          <strong>Google Play</strong> — distributes the app and processes payments for
+          the optional Pro subscription. Payment details are handled entirely by Google
+          and never reach the app or the developer. See
+          <a href="https://policies.google.com/privacy">Google's Privacy Policy</a>.
+        </li>
+        <li>
+          <strong>RevenueCat</strong> — manages the Pro subscription: it checks with Google
+          Play whether a subscription is active, restores purchases and shows the
+          subscription screen. Because the app has no account, RevenueCat identifies your
+          installation with a random identifier it generates. It receives purchase and
+          subscription information (such as the product, purchase and renewal dates, price
+          and currency, and Google Play transaction identifiers) along with basic device
+          and app information (such as device model, operating system version, app version,
+          country, and your IP address as part of the connection). It is used only to
+          provide the subscription. See
+          <a href="https://www.revenuecat.com/privacy">RevenueCat's Privacy Policy</a>.
+        </li>
+        <li>
+          <strong>Google Play In-App Review</strong> — occasionally, after a completed task,
+          the app may ask Google Play to show its review prompt. Google decides whether the
+          prompt appears, and your rating or review goes directly to Google Play. The app
+          never learns whether you rated it or what you wrote.
+        </li>
+        <li>
+          <strong>Firebase Analytics and Firebase Crashlytics</strong> (Google) — only if
+          you turn on usage and crash reports, as described in section 4.
+        </li>
+      </ul>
       <p>
-        The app is distributed through Google Play. Google collects its own information in
-        connection with app distribution, under Google's own privacy policy, independently
-        of this app.
+        The app does not use Firebase Authentication, Cloud Firestore, Firebase Realtime
+        Database, Firebase Cloud Storage, Firebase Cloud Messaging, any advertising network,
+        or any other analytics or tracking provider.
       </p>
       <p>
         If you use the optional Wear OS companion, readings you enter on the watch are sent
@@ -175,7 +239,7 @@
         <li>Data is kept in the app's private storage area, which other apps cannot read.</li>
         <li>An optional biometric or device-credential privacy lock can gate access to the app.</li>
         <li>There is no account system, so there are no passwords or credentials to be breached.</li>
-        <li>No analytics or crash-reporting service receives your data.</li>
+        <li>Usage and crash reporting is off unless you turn it on, and never includes your health entries.</li>
         <li>Exporting and sharing a file always requires a deliberate action from you.</li>
       </ul>
       <p>
@@ -192,10 +256,12 @@
         <li><strong>Correct</strong> — entries can be edited or deleted individually.</li>
         <li><strong>Delete</strong> — "Delete all data" in Settings removes every reading, meal, reminder and profile from the device.</li>
         <li><strong>Remove</strong> — uninstalling the app removes its local database from your device.</li>
+        <li><strong>Reports</strong> — turn anonymous usage and crash reports on or off at any time in Settings → Data and privacy.</li>
+        <li><strong>Subscription</strong> — manage or cancel a Pro subscription at any time in Google Play.</li>
       </ul>
       <p>
-        Because there is no server and no account, there is no remote copy of your data for
-        the developer to retrieve, correct or delete on your behalf. Deleting your data on
+        Because there is no account and your health entries are never uploaded, there is no
+        remote copy of them for the developer to retrieve, correct or delete on your behalf. Deleting your data on
         the device deletes it completely, and it cannot be recovered afterwards unless you
         made a backup file yourself.
       </p>
@@ -205,8 +271,8 @@
         The app is intended for adults managing their own pregnancy care, and is not
         directed to children. It is not designed for, marketed to, or intended to be used by
         children, and it does not knowingly collect information from children. Because the
-        app has no account system and collects nothing to a server, any information in the
-        app is held only on the device where it was entered.
+        app has no account system and never uploads health entries, the information you
+        record is held only on the device where it was entered.
       </p>
 
       <h2>12. Medical disclaimer</h2>
@@ -238,7 +304,7 @@
       <h2>13. Changes to this policy</h2>
       <p>
         This policy may be updated when the app changes or when our privacy practices
-        change — for example if a diagnostic or analytics service is ever added. The
+        change — for example if a service that receives information is added or changed. The
         effective date at the top of this page shows when the current version took effect.
         Continuing to use the app after an update means you accept the revised policy.
       </p>
